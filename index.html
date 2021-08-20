@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>BitCoin</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Rubik:wght@500&display=swap" rel="stylesheet">
+</head>
+<body style="background: black">
+<div class="container-fullwidth">
+    <nav>
+        <ul>
+            <li class="logo">BITCOIN ANALYSER
+            </li>
+            <li class="items"><a href="#section1">Menu</a></li>
+            <li class="items"><a href="#section2">Feedback</a></li>
+            <li class="btn btnRes"><a href="#"><i class="fas fa-bars"></i></a></li>
+        </ul>
+    </nav>
+    <section id="section1" style="border: black solid 2px; height: 800px;">
+        <div id="analiseGrafico">
+            <h1 style="text-align: center;">Bitcoin variation range analysis </h1>
+            <div id="formularioGráfico" class="form-group">
+                <form id="form" action="/" method="get">
+                    <label for="dataInicial">Inicial Date</label>
+                    <input id="dataInicial" maxlength="10" class="form-control" type="text" name="dataInicial"
+                           placeholder="YYYY-MM-DD">
+                    <label for="dataFinal">End Date</label>
+                    <input id="dataFinal" maxlength="10" class="form-control" type="text" name="dataFinal"
+                           placeholder=" YYYY-MM-DD">
+                </form>
+            </div>
+            <div class="btnDiv">
+                <button id="btnCall" class="btn btn-success" onclick="grafico()">Create chart</button>
+                <button id="btnLimpar" class="btn btn-info" onclick="limpar()">Clean chart</button>
+            </div>
+            <div id="meuGrafico">
+                <canvas id="myChart" width="400" height="200"></canvas>
+            </div>
+        </div>
+    </section>
+    <footer style="background: black">
+        <div style="text-align: center; color: white">
+            <a target="_blank" style="color: white; text-decoration: none; height: 100px"
+               href="https://www.linkedin.com/in/joaopedro-sousa/">
+                <i id="linkedin" class="fab fa-linkedin-in"></i>
+            </a>
+            <a style="float: right" href="#section1">
+                <i id="up" class="fas fa-chevron-up"></i>
+            </a>
+
+        </div>
+    </footer>
+</div>
+<div class="modal"></div>
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+<script src="js/validador.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
